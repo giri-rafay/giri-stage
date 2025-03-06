@@ -1,0 +1,13 @@
+apiVersion: system.k8smgmt.io/v3
+kind: Project
+metadata:
+  description: exploratory stuff of giri
+  name: giri
+spec:
+  clusterResourceQuota: {}
+  defaultClusterNamespaceQuota: {}
+  driftWebhook:
+    enabled: true
+  syncExcludedNamespaces:
+  - ns2
+  - ns1

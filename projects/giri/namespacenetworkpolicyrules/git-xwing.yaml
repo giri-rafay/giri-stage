@@ -1,0 +1,15 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicyRule
+metadata:
+  name: git-xwing
+  project: giri
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: xwing-block.yaml
+      repository: giri-parameters
+      revision: main
+    options: {}
+    type: Yaml
+  version: v2

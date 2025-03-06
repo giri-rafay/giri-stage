@@ -1,0 +1,18 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: giri-nginx
+  project: giri
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/giri-nginx/nginx-15.4.2.tgz
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: ns1
+  placement:
+    selector: rafay.dev/clusterName=giri-oct23-stg
+  version: giri-nginx-v1-202410231047360000

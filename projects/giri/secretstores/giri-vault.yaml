@@ -1,0 +1,14 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: SecretStore
+metadata:
+  name: giri-vault
+  project: giri
+spec:
+  config:
+    vault:
+      clusters:
+      - authPath: /
+        clusterName: giri-k3d-mar5
+        vaultNamespace: giri-ns
+      host: giri-vault.com
+  provider: Vault

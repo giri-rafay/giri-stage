@@ -1,0 +1,11 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: agent-k3d
+  project: giri
+spec:
+  active: true
+  cluster:
+    name: giri-k3d-mar5
+  type: Cluster
+  version: r3.2.0

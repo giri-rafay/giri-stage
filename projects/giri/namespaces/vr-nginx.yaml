@@ -1,0 +1,20 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  labels:
+    kubernetes.io/metadata.name: vr-nginx
+  name: vr-nginx
+  project: giri
+spec:
+  drift:
+    action: Deny
+    enabled: true
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-stg-mar19-2
+    - key: rafay.dev/clusterName
+      value: giri-stg-jun13
+  resourceQuotas:
+    configMaps: "1"

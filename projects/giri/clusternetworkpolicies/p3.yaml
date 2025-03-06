@@ -1,0 +1,10 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicy
+metadata:
+  name: p3
+  project: giri
+spec:
+  rules:
+  - name: rule3
+    version: v3
+  version: v1

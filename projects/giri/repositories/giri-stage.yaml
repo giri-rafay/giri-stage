@@ -1,0 +1,27 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: giri-stage
+  project: giri
+spec:
+  agents:
+  - name: agent-k3d
+  credentials:
+    password: sealed://credentials.password
+    username: giri-rafay
+  endpoint: https://github.com/giri-rafay/giri-stage.git
+  options:
+    provider: Github
+  secret:
+    name: file://artifacts/giri-stage/sealed-secret.yaml
+  type: Git
+status:
+  agents:
+  - id: g293en2
+    name: agent-k3d
+  projects:
+  - projectId: 28o98lm
+    repositoryId: 2qoygzm
+  webhookConfig:
+    webhookSecret: d3c4821031eebd219745b59a3ee84121edcf74d2d1607331abcb31ba4fe96490
+    webhookURL: https://console.stage.rafay.dev/v2/config/webhook/repository/2qoygzm

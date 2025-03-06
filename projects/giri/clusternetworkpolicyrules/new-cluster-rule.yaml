@@ -1,0 +1,15 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicyRule
+metadata:
+  name: new-cluster-rule
+  project: giri
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: xwing-block.yaml
+      repository: giri-parameters
+      revision: main
+    options: {}
+    type: Yaml
+  version: version4

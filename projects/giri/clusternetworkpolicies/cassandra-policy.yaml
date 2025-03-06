@@ -1,0 +1,10 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicy
+metadata:
+  name: cassandra-policy
+  project: giri
+spec:
+  rules:
+  - name: cassandra-rule
+    version: cas-rule-v1
+  version: cassandra-policy

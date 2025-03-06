@@ -1,0 +1,10 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicy
+metadata:
+  name: test-pol1
+  project: giri
+spec:
+  rules:
+  - name: test-rule1
+    version: blocker-v1
+  version: v1

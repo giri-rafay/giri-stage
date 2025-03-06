@@ -1,0 +1,17 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicyRule
+metadata:
+  name: xwing-block
+  project: giri
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/xwing-block/cluster-wide-rule.yaml
+    options: {}
+    type: Yaml
+  sharing:
+    enabled: true
+    projects:
+    - name: ram-project
+  version: v1

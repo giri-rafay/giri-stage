@@ -1,0 +1,28 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: varun-2-11-aks
+  project: giri
+spec:
+  base:
+    name: default-aks
+    version: 2.11.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      metricsServer:
+        customizationEnabled: true
+      prometheusAdapter:
+        customizationEnabled: true
+  driftWebhook:
+    enabled: true
+  networkPolicy:
+    policies:
+    - name: varun-clusterwide-policy
+      version: v1
+    profile:
+      name: default
+      version: latest
+  type: custom
+  version: v3

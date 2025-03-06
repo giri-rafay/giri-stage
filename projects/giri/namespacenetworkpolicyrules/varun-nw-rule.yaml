@@ -1,0 +1,13 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicyRule
+metadata:
+  name: varun-nw-rule
+  project: giri
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/varun-nw-rule/networkpolicy.yaml
+    options: {}
+    type: Yaml
+  version: v1

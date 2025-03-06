@@ -1,0 +1,14 @@
+apiVersion: cost.k8smgmt.io/v3
+kind: CostProfile
+metadata:
+  name: audit-test
+  project: giri
+spec:
+  installationParams:
+    aws:
+      awsCredentials:
+        cloudCredentialsName: giri-cost-aws
+      curIntegration: {}
+      spotIntegration: {}
+  providerType: aws
+  version: c1

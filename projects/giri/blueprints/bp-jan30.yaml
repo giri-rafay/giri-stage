@@ -1,0 +1,29 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: bp-jan30
+  project: giri
+spec:
+  base:
+    name: default-aks
+    version: 3.1.0
+  customAddons:
+  - name: jan30-xwing
+    version: v1
+  - dependsOn:
+    - jan30-xwing
+    name: jan30-nginx
+    version: v1
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      gpuOperator: {}
+      metricsServer:
+        customizationEnabled: true
+      prometheusAdapter:
+        customizationEnabled: true
+  driftWebhook:
+    enabled: true
+  type: custom
+  version: v1

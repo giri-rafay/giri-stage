@@ -1,0 +1,10 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicy
+metadata:
+  name: varun-clusterwide-policy
+  project: giri
+spec:
+  rules:
+  - name: varun-clusterwide-rule
+    version: v1
+  version: v1

@@ -1,0 +1,23 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: repo-2
+  project: giri
+spec:
+  agents:
+  - name: agent-1
+  credentials:
+    password: sealed://credentials.password
+    username: rakshith@rafay.co
+  endpoint: https://github.com/rakshith-rafay/stage-1-24-repo.git
+  options: {}
+  secret:
+    name: file://artifacts/repo-2/sealed-secret.yaml
+  type: Git
+status:
+  agents:
+  - id: jkeqj4k
+    name: agent-1
+  projects:
+  - projectId: 28o98lm
+    repositoryId: kon9e6m

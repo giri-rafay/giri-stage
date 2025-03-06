@@ -1,0 +1,16 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: default-stable-helm
+  project: giri
+spec:
+  endpoint: https://charts.helm.sh/stable
+  options: {}
+  type: Helm
+status:
+  projects:
+  - projectId: 28o98lm
+    repositoryId: k5o6n72
+  webhookConfig:
+    webhookSecret: 0d801a1c600c7f550791df28089554b6a2393ef4dc3ff50b6b3def5b2d5ed307
+    webhookURL: https://console.stage.rafay.dev/v2/config/webhook/repository/k5o6n72

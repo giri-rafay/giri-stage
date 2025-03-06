@@ -1,0 +1,10 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicy
+metadata:
+  name: rel-policy1
+  project: giri
+spec:
+  rules:
+  - name: rel-policy-rule
+    version: rule-v1
+  version: rel-policy-version1

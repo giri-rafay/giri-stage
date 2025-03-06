@@ -1,0 +1,15 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAConstraint
+metadata:
+  name: july31
+  project: giri
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/july31/ns-label-opa-constraint.yaml
+    options: {}
+    type: Yaml
+  published: true
+  templateName: july31
+  version: v1

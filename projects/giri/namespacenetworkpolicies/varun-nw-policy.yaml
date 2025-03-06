@@ -1,0 +1,10 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicy
+metadata:
+  name: varun-nw-policy
+  project: giri
+spec:
+  rules:
+  - name: varun-nw-rule
+    version: v1
+  version: v1

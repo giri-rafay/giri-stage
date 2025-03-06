@@ -1,0 +1,25 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: AddonOverride
+metadata:
+  labels:
+    rafay.dev/overrideScope: clusterLabels
+    rafay.dev/overrideType: manifestsFile
+  name: shree-ovr-1
+  project: giri
+spec:
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-stg-mar19-2
+  repo:
+    path:
+      name: reddis-ovr.yaml
+    repository: shree-repo
+    revision: main
+  resource:
+    selector:
+      name: shree-addon-1
+    type: Addon
+  type: Yaml
+  valuesPath:
+    name: file://shree-ovr-1/shree-ovr-1.yaml

@@ -1,0 +1,13 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicyRule
+metadata:
+  name: rctl-cluster-rule1
+  project: giri
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/rctl-cluster-rule1/clusterwide.yaml
+    options: {}
+    type: Yaml
+  version: rctl-cluster-vers1

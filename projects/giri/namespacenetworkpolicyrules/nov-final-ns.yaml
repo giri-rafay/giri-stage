@@ -1,0 +1,13 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicyRule
+metadata:
+  name: nov-final-ns
+  project: giri
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/nov-final-ns/xwing-block-rule.yaml
+    options: {}
+    type: Yaml
+  version: v1

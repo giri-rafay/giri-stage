@@ -1,0 +1,9 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: InfraProvisioner
+metadata:
+  name: d
+  project: giri
+spec:
+  config: null
+  repository: giri-parameters
+  type: Terraform

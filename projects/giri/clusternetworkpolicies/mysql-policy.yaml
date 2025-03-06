@@ -1,0 +1,10 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicy
+metadata:
+  name: mysql-policy
+  project: giri
+spec:
+  rules:
+  - name: mysql-rule
+    version: mysql-rule-v1
+  version: v1

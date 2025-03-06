@@ -1,0 +1,19 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: vr-nginx
+  project: giri
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: nginx-deployment.yaml
+      repository: giri-hub
+      revision: main
+    type: Yaml
+  namespace: vr-nginx
+  sharing:
+    enabled: true
+    projects:
+    - name: giri-stability
+  version: v1

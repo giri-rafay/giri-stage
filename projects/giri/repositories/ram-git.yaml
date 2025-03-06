@@ -1,0 +1,20 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: ram-git
+  project: giri
+spec:
+  agents:
+  - {}
+  credentials:
+    password: sealed://credentials.password
+    username: rambhupalchowdary
+  endpoint: https://github.com/RamBhupalChowdary/pipeline-test.git
+  options: {}
+  secret:
+    name: file://artifacts/ram-git/sealed-secret.yaml
+  type: Git
+status:
+  projects:
+  - projectId: 28o98lm
+    repositoryId: k359g1m

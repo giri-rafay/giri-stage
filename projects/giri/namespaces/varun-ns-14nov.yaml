@@ -1,0 +1,22 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  annotations:
+    rafay.dev/description: ""
+  name: varun-ns-14nov
+  project: giri
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  networkPolicyParams:
+    networkPolicyEnabled: true
+    policies:
+    - name: varun-nw-policy
+      version: v1
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-stg-nov14
+  resourceQuotas: {}

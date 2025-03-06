@@ -1,0 +1,18 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: AddonOverride
+metadata:
+  labels:
+    rafay.dev/overrideScope: clusterLabels
+    rafay.dev/overrideType: valuesFile
+  name: connector-override
+  project: giri
+spec:
+  placement:
+    selector: rafay.dev/clusterName in (giri-sept-az-stg)
+  resource:
+    selector:
+      selector: rafay.dev/system=true,rep-addon=v2-infra
+    type: Addon
+  type: Helm
+  valuesPath:
+    name: file://connector-override/connector-override.yaml

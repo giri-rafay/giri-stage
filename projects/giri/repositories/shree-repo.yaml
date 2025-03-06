@@ -1,0 +1,19 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: shree-repo
+  project: giri
+spec:
+  agents:
+  - {}
+  endpoint: https://github.com/Shree-rafay/dhruthidemo.git
+  options:
+    provider: Github
+  type: Git
+status:
+  projects:
+  - projectId: 28o98lm
+    repositoryId: kgrogjm
+  webhookConfig:
+    webhookSecret: d0028d4ac35165ac2004f6515b95b6df3148b94bd8197ab35450f4a54c9a6fb9
+    webhookURL: https://console.stage.rafay.dev/v2/config/webhook/repository/kgrogjm

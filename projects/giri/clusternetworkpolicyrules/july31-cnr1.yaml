@@ -1,0 +1,13 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicyRule
+metadata:
+  name: july31-cnr1
+  project: giri
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/july31-cnr1/cluster-wide.yaml
+    options: {}
+    type: Yaml
+  version: version1

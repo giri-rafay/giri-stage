@@ -1,0 +1,22 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: AddonOverride
+metadata:
+  labels:
+    rafay.dev/overrideScope: clusterLabels
+    rafay.dev/overrideType: manifestsFile
+  name: vr-nginx
+  project: giri
+spec:
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-stg-mar19-2
+    - key: rafay.dev/clusterName
+      value: giri-stg-mar19-1
+  resource:
+    selector:
+      name: vr-nginx
+    type: Addon
+  type: Yaml
+  valuesPath:
+    name: file://vr-nginx/vr-nginx.yaml

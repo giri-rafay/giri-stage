@@ -1,0 +1,17 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicyRule
+metadata:
+  name: cas-rule
+  project: giri
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/cas-rule/cluster-wide-rule.yaml
+    options: {}
+    type: Yaml
+  sharing:
+    enabled: true
+    projects:
+    - name: ram-project
+  version: cas-block

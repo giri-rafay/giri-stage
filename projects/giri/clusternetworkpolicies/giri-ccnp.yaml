@@ -1,0 +1,10 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicy
+metadata:
+  name: giri-ccnp
+  project: giri
+spec:
+  rules:
+  - name: new-cluster-rule
+    version: version1
+  version: v2

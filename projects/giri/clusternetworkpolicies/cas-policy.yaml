@@ -1,0 +1,14 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicy
+metadata:
+  name: cas-policy
+  project: giri
+spec:
+  rules:
+  - name: cas-rule
+    version: cas-block
+  sharing:
+    enabled: true
+    projects:
+    - name: ram-project
+  version: cas-pol-rule1

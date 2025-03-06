@@ -1,0 +1,53 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: bp1
+  project: giri
+spec:
+  base:
+    name: default-aks
+    version: 2.11.0
+  componentsCriticality:
+  - name: nginx-addon
+  - name: opa-policy
+  - name: network-policy
+  - name: cost-profile
+  costProfile:
+    name: default-cost-profile-azure
+    version: version-1729674604
+  customAddons:
+  - dependsOn:
+    - minio
+    name: nginx-addon
+    version: version1
+  - name: minio
+    version: minio-v1
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      metricsServer:
+        customizationEnabled: true
+      prometheusAdapter:
+        customizationEnabled: true
+  drift:
+    action: Deny
+    enabled: true
+  driftWebhook:
+    enabled: true
+  namespaceConfig:
+    enableSync: true
+    syncType: Unmanaged
+  networkPolicy:
+    policies:
+    - name: giri-ccnp
+      version: v1
+    profile:
+      name: default
+      version: latest
+  opaPolicy:
+    profile:
+      name: default
+      version: latest
+  type: custom
+  version: v2

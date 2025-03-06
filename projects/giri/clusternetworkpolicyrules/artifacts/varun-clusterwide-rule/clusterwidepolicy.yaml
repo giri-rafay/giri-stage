@@ -1,0 +1,15 @@
+apiVersion: "cilium.io/v2"
+kind: CiliumClusterwideNetworkPolicy
+metadata:
+  name: "allow-to-system-namespaces"
+spec:
+  description: "Policy to allow any traffic to and from system namespaces"
+  endpointSelector:
+    matchExpressions:
+    - {key: k8s:io.kubernetes.pod.namespace, operator: In, values: [flux-system, dynatrace, nginx-ingress, external-secrets, kube-public, kube-node-lease, kube-system, cluster-autoscaler, wiz, rafay-system, rafay-infra, monitoring]}
+  ingress:
+  - fromEntities:
+    - all
+  egress:
+  - toEntities:
+    - all

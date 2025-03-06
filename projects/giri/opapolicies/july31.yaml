@@ -1,0 +1,10 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAPolicy
+metadata:
+  name: july31
+  project: giri
+spec:
+  constraintList:
+  - name: july31
+    version: v1
+  version: v1

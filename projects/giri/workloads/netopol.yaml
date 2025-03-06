@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: netopol
+  project: giri
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/netopol/netopol.yaml
+    type: Yaml
+  namespace: nov20
+  placement:
+    selector: rafay.dev/clusterName=giri-20nov-az1
+  version: netopol-v1-202411201636300000

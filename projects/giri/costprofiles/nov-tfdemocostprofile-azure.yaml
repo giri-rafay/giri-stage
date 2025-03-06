@@ -1,0 +1,12 @@
+apiVersion: cost.k8smgmt.io/v3
+kind: CostProfile
+metadata:
+  name: nov-tfdemocostprofile-azure
+  project: giri
+spec:
+  installationParams:
+    azure:
+      customPricing:
+        cloudCredentialsName: giri-azure-cost
+  providerType: azure
+  version: v0

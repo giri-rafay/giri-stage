@@ -1,0 +1,19 @@
+apiVersion: cost.k8smgmt.io/v3
+kind: CostProfile
+metadata:
+  name: giri-rctl
+  project: giri
+spec:
+  installationParams:
+    aws:
+      awsCredentials:
+        cloudCredentialsName: giri-aws
+      curIntegration:
+        athenaBucketName: s3://aws-athena-query-results-rafay-kubecost-qa
+        athenaDatabase: athenacurcfn_rafay_kubecost_qa
+        athenaRegion: us-west-2
+        athenaTable: rafay_kubecost_qa
+        awsAccountId: "799025805923"
+        masterPayerArn: arn:aws:iam::799025805923:role/KubecostRoleQA-679196758854
+  providerType: aws
+  version: giri-v1

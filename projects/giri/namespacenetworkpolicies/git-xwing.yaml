@@ -1,0 +1,10 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicy
+metadata:
+  name: git-xwing
+  project: giri
+spec:
+  rules:
+  - name: git-xwing
+    version: v1
+  version: v1

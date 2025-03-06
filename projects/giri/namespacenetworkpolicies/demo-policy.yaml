@@ -1,0 +1,10 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicy
+metadata:
+  name: demo-policy
+  project: giri
+spec:
+  rules:
+  - name: demo
+    version: v1
+  version: v1

@@ -1,0 +1,20 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: AddonOverride
+metadata:
+  labels:
+    rafay.dev/overrideScope: clusterLabels
+    rafay.dev/overrideType: valuesFile
+  name: nginx-addon
+  project: giri
+spec:
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-prv-sep18
+  resource:
+    selector:
+      name: nginx-helm
+    type: Addon
+  type: Helm
+  valuesPath:
+    name: file://nginx-addon/nginx-addon.yaml

@@ -1,0 +1,13 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicyRule
+metadata:
+  name: rel-policy-rule
+  project: giri
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/rel-policy-rule/cluster-wide.yaml
+    options: {}
+    type: Yaml
+  version: rule-v1

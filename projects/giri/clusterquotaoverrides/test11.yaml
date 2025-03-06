@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: ClusterQuotaOverride
+metadata:
+  labels:
+    rafay.dev/overrideScope: clusterLabels
+    rafay.dev/overrideType: manifestsFile
+  name: test11
+  project: giri
+spec:
+  resource:
+    selector:
+      selector: rafay.dev/system=true
+    type: ClusterQuota
+  type: Yaml

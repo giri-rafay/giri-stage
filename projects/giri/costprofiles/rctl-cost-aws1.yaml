@@ -1,0 +1,13 @@
+apiVersion: cost.k8smgmt.io/v3
+kind: CostProfile
+metadata:
+  name: rctl-cost-aws1
+  project: giri
+spec:
+  installationParams: {}
+  providerType: aws
+  sharing:
+    enabled: true
+    projects:
+    - name: madhuproject
+  version: rctl-aws-version1

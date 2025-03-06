@@ -1,0 +1,8 @@
+connector:
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+    limits:
+      memory: 1024Mi
+      cpu: 1000m

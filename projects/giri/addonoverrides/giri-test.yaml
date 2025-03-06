@@ -1,0 +1,20 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: AddonOverride
+metadata:
+  labels:
+    rafay.dev/overrideScope: clusterLabels
+    rafay.dev/overrideType: manifestsFile
+  name: giri-test
+  project: giri
+spec:
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-stg-jan19
+  resource:
+    selector:
+      name: jan19-red
+    type: Addon
+  type: Yaml
+  valuesPath:
+    name: file://giri-test/giri-test.yaml

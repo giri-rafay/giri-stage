@@ -1,0 +1,11 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAProfile
+metadata:
+  name: ram-ip-311
+  project: giri
+spec:
+  installationParams:
+    auditInterval: 61
+    constraintViolationsLimit: 21
+  opaVersion: 3.11.0
+  version: v1

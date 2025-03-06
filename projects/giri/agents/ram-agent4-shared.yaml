@@ -1,0 +1,11 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: ram-agent4-shared
+  project: giri
+spec:
+  active: true
+  cluster:
+    name: ram-mks-stg1
+  type: Cluster
+  version: r1.22.0

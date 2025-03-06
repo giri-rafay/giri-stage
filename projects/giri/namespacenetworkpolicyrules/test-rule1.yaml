@@ -1,0 +1,13 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicyRule
+metadata:
+  name: test-rule1
+  project: giri
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/test-rule1/xwing-block-rule.yaml
+    options: {}
+    type: Yaml
+  version: blocker-v1

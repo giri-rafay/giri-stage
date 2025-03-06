@@ -1,0 +1,10 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicy
+metadata:
+  name: aug-pol
+  project: giri
+spec:
+  rules:
+  - name: aug-rul1
+    version: v1
+  version: v1

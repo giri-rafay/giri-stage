@@ -1,0 +1,14 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicy
+metadata:
+  name: xwing-blocker-policy
+  project: giri
+spec:
+  rules:
+  - name: xwing-block
+    version: v1
+  sharing:
+    enabled: true
+    projects:
+    - name: ram-project
+  version: v1

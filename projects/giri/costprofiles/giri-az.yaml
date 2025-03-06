@@ -1,0 +1,14 @@
+apiVersion: cost.k8smgmt.io/v3
+kind: CostProfile
+metadata:
+  name: giri-az
+  project: giri
+spec:
+  installationParams:
+    azure:
+      customPricing:
+        cloudCredentialsName: giri-aks
+        spotInstance: {}
+      gpuEstimates: {}
+  providerType: azure
+  version: v1

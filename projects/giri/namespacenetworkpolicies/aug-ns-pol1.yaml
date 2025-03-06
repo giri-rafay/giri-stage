@@ -1,0 +1,10 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicy
+metadata:
+  name: aug-ns-pol1
+  project: giri
+spec:
+  rules:
+  - name: aug-ns-rule1
+    version: v1
+  version: v1

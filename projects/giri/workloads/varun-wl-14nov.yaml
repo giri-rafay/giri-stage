@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: varun-wl-14nov
+  project: giri
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/varun-wl-14nov/varun-wl-14nov.yaml
+    type: Yaml
+  namespace: varun-ns-14nov
+  placement:
+    selector: rafay.dev/clusterName=giri-stg-nov14
+  version: varun-wl-14nov-v1-202411141224340000

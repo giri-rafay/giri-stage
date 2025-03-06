@@ -1,0 +1,11 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: dsds
+  project: giri
+spec:
+  active: true
+  cluster:
+    name: giri-np
+  type: Cluster
+  version: r1.22.0

@@ -1,0 +1,13 @@
+apiVersion: cost.k8smgmt.io/v3
+kind: CostProfile
+metadata:
+  name: nov-tfdemocostprofile-onprem
+  project: giri
+spec:
+  installationParams:
+    other:
+      cpu: "2.5"
+      gpu: "3.61"
+      memory: "4.3"
+  providerType: other
+  version: v0

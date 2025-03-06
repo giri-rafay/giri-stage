@@ -1,0 +1,20 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: giri-resources
+  project: giri
+spec:
+  agents:
+  - {}
+  credentials:
+    password: sealed://credentials.password
+    username: giri-rafay
+  endpoint: https://github.com/giri-rafay/gitops.git
+  options: {}
+  secret:
+    name: file://artifacts/giri-resources/sealed-secret.yaml
+  type: Git
+status:
+  projects:
+  - projectId: 28o98lm
+    repositoryId: 2q3pp9m

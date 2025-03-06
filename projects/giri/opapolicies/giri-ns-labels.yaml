@@ -1,0 +1,10 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAPolicy
+metadata:
+  name: giri-ns-labels
+  project: giri
+spec:
+  constraintList:
+  - name: ns-req-labels
+    version: v1
+  version: v1

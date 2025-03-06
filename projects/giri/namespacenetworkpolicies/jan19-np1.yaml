@@ -1,0 +1,10 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicy
+metadata:
+  name: jan19-np1
+  project: giri
+spec:
+  rules:
+  - name: jan19-n1
+    version: v1
+  version: v1

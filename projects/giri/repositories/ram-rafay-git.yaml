@@ -1,0 +1,23 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: ram-rafay-git
+  project: giri
+spec:
+  agents:
+  - name: ram-agent4-shared
+  credentials:
+    password: sealed://credentials.password
+    username: ram-rafay
+  endpoint: https://github.com/ram-rafay/rafay-gitops.git
+  options: {}
+  secret:
+    name: file://artifacts/ram-rafay-git/sealed-secret.yaml
+  type: Git
+status:
+  agents:
+  - id: z24ry7k
+    name: ram-agent4-shared
+  projects:
+  - projectId: 28o98lm
+    repositoryId: k5o69d2

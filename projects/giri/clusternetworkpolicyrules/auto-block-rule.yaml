@@ -1,0 +1,13 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicyRule
+metadata:
+  name: auto-block-rule
+  project: giri
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/auto-block-rule/cluster-wide-rule.yaml
+    options: {}
+    type: Yaml
+  version: blocker-v1

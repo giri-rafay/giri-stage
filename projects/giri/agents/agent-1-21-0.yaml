@@ -1,0 +1,11 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: agent-1-21-0
+  project: giri
+spec:
+  active: true
+  cluster:
+    name: giri-stg-oct18
+  type: Cluster
+  version: r2.1.0

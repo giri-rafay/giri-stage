@@ -1,0 +1,12 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicy
+metadata:
+  name: nov-final
+  project: giri
+spec:
+  rules:
+  - name: nov-final-ns
+    version: v1
+  - name: ipns1
+    version: v1
+  version: v2

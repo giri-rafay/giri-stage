@@ -1,0 +1,10 @@
+apiVersion: security.k8smgmt.io/v3
+kind: ClusterNetworkPolicy
+metadata:
+  name: mar30-pol
+  project: giri
+spec:
+  rules:
+  - name: mar30-rule
+    version: v1
+  version: v1

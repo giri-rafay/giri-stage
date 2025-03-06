@@ -1,0 +1,16 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: default-cert-manager
+  project: giri
+spec:
+  endpoint: https://github.com/jetstack/cert-manager.git
+  options: {}
+  type: Git
+status:
+  projects:
+  - projectId: 28o98lm
+    repositoryId: 2847rlk
+  webhookConfig:
+    webhookSecret: aafcc0684f11f38e10b93c8f1edbf9767d12cda7a976f28afcd7bb4432594a19
+    webhookURL: https://console.stage.rafay.dev/v2/config/webhook/repository/2847rlk

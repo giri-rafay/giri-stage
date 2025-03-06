@@ -1,0 +1,14 @@
+apiVersion: security.k8smgmt.io/v3
+kind: NamespaceNetworkPolicy
+metadata:
+  name: nov-xwing-policy
+  project: giri
+spec:
+  rules:
+  - name: nov-xwing-block
+    version: xwing-block1
+  sharing:
+    enabled: true
+    projects:
+    - name: fayas
+  version: v1

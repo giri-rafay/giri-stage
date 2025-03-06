@@ -1,0 +1,13 @@
+apiVersion: cost.k8smgmt.io/v3
+kind: CostProfile
+metadata:
+  name: giri-mks-profile
+  project: giri
+spec:
+  installationParams:
+    other:
+      cpu: "0.5"
+      gpu: "0.75"
+      memory: "0.5"
+  providerType: other
+  version: v1
